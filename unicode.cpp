@@ -19,8 +19,14 @@ int main()
   
   //make_glider(board);
   
-  //Run the simulation for NUM_CYCLES times.
-  run_life(board);
+  //Run the simulation for NUM_SIMULATIONS * NUM_CYCLES times.
+  for(int i=0; i<NUM_SIMULATIONS; i++)
+  {
+    reset_board(board, DEAD_CELL);
+    usleep(DELAY * 10);
+    seed_populate_board(seed, board);
+    run_life(board);
+  }
   return 0;
 }
 
