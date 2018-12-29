@@ -2,6 +2,7 @@
 #define FUNCTIONS_H
 
 #include <iostream>
+#include <cstdlib>
 #include <unistd.h>
 #include "Cell.h"
 
